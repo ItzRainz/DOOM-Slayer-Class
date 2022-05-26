@@ -1,3 +1,4 @@
+'''
 class Slayer:
     hp = 100
     ammo = 0
@@ -53,18 +54,10 @@ class Slayer:
             self.aggro()
 
     def attack(self):
-        count = 0
-
-        if distance(self.demon.position, player.position) <= 10:
-            while count < 15:
-                if (player.x > self.demon.x and distance(self.demon.position, player.position) > 2:
-                    self.fireBall.x += .05
-                    count+=1
-                if player.x < self.demon.x and distance(self.demon.position, player.position) > 2:
-                    self.fireBall.x -= .05
-                    count+=1
-
-        if player.x = fireBall.x:
+        if distance(self.demon.position, player.position) <= 15 and distance(self.demon.position, player.position) >= 10:
+                fire();
+        
+        if distance(self.demon.position, player.position) < 10:
             #player.setHealth(player.getHealth() - self.damage)
         
         elif distance(self.demon.position, player.position) <= 1:
@@ -73,4 +66,3 @@ class Slayer:
 
     def die(self):
         destroy(self.demon)
-    '''
